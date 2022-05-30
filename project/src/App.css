@@ -3,3 +3,17 @@ body {
   padding: 0;
   margin: 0;
 }
+.welcome-text {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.welcome-text h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+.welcome-text h2 {
+  font-weight: 400;
+}
