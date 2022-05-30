@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Menu.css";
+import { Link } from "react-router-dom";
 
-function Menu(props) {
+const Menu = (props) => {
   const [menuClass, setMenuClass] = useState("menu");
   const [menuButtonClass, setMenuButtonClass] = useState("menu-button");
   const toggle = () => {
@@ -19,13 +20,15 @@ function Menu(props) {
         <h2>MENU</h2>
       </div>
       <div className="menu-items-wrapper">
-        <a href="#"> Login</a>
-        <a href="#"> Account</a>
-        <a href="#"> Your spaces</a>
-        <a href="#"> groups</a>
+        <Link to="/"> Home</Link>
+        <Link to="/Login"> Login</Link>
+        <Link to="/Register"> Register</Link>
+        <Link to="/Account"> Account</Link>
+        <Link to="/Spaces"> Your spaces</Link>
+        <Link to="/Groups"> Groups</Link>
       </div>
     </div>
   );
-}
+};
 
 export default Menu;

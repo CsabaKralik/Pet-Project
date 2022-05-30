@@ -1,17 +1,18 @@
 .menu {
+  z-index: 20;
   height: 100vh;
   background-color: lightgreen;
-  width: 20rem;
-  position: relative;
+  width: 17rem;
+  position: absolute;
   left: 0rem;
-  transform: translateX(-20rem);
+  transform: translateX(-17rem);
   transition: 0.6s;
 }
 .open {
-  left: 20rem;
+  left: 17rem;
 }
 .opened {
-  transform: translateX(-6rem);
+  transform: translateX(-6.5rem);
 }
 .menu-button {
   position: absolute;
@@ -32,7 +33,7 @@
   transform: translate(-25%, -25%);
 }
 .menu-items-wrapper a {
-  padding: 3rem;
+  padding: 2rem;
   text-decoration: none;
   color: black;
   font-size: 1.8rem;
