@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./register.css";
 
 //registration fetch
@@ -16,13 +17,14 @@ const registration = (email, password) => {
 };
 
 const Register = () => {
+  const navigate = useNavigate();
   //states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordAgain, setPasswordAgain] = useState("");
 
   //handle submiting the form
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (email === "" || password === "") {
       return new Error("Please, fill in both fields");
@@ -30,8 +32,12 @@ const Register = () => {
     if (password !== passwordAgain) {
       return new Error("Passwords do not match");
     }
-    registration(email, password);
+    await registration(email, password);
+    setEmail("");
+    setPassword("");
+    setPasswordAgain("");
     console.log("end");
+    navigate("/Login");
   };
 
   //handle changes
