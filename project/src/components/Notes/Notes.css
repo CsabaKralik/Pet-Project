@@ -1,0 +1,28 @@
+#spaces {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 0;
+}
+.title {
+  margin: 0;
+  text-align: center;
+}
+.note-container {
+  width: 90%;
+  border: solid 1px red;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.new-note {
+  background-color: #f5e268;
+  border-radius: 3px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: none;
+}
+.new-note:hover {
+  box-shadow: 0px 0px 8px 2px gray;
+}
